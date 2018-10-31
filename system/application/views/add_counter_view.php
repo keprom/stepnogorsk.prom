@@ -15,12 +15,12 @@ echo form_open("billing/adding_counter");
 Дата гос проверки ( пример:01.01.10 )
 <input type="text" name="data_gos_proverki" value="" size="1"/><br/>
 Тип счетчика
-<select name="type_id" style="width : 200">
+<select name="type_id" style="width : 200px">
     <?php foreach ($types->result() as $row): ?>
         <option value="<?php echo $row->id; ?>"><?php echo $row->name; ?></option>
     <?php endforeach; ?>
 </select>
-<input type='hidden' name='point_id' value= <?php echo $point_id; ?>/>
+<input type='hidden' name='point_id' value="<?php echo $point_id; ?>"/>
 
 <h5>Дата установки</h5>
 День <input type="text" name="day" value="" size="5"/>

@@ -59,5 +59,5 @@ if ($this->session->flashdata("is_deleted") == -1) echo "<h3>Точка учет
         <!--end added-->
     </p>
 
-    </h3>
-    <hr/>
+</h5>
+<hr/>

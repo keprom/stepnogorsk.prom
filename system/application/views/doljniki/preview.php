@@ -28,5 +28,5 @@
     <br>
     <input type=submit value='Выдать отчет'/>
     </form>
-    <center>
+</center>
 </html>

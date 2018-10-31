@@ -96,7 +96,7 @@ $j = 0;
                     <input type=hidden name=nds value="12"/> <br/>
                     <input type='submit' value='добавить показание'/>
                     </form>
-                    <a name=<?php $j; ?>/>
+                    <a name="<?php $j; ?>"/>
                 </td>
             </tr>
         <?php endif; ?>
