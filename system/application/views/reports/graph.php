@@ -10,15 +10,13 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>jquery.jqplot.css"/>
     <script language="javascript" type="text/javascript"
             src="<?php echo base_url(); ?>plugins/jqplot.barRenderer.min.js"/></script>
-    <
-    script
+    <script
     language = "javascript"
     type = "text/javascript"
     src = "<?php echo base_url();?>plugins/jqplot.categoryAxisRenderer.min.js" / ></script>
     <script language="javascript" type="text/javascript"
             src="<?php echo base_url(); ?>plugins/jqplot.pointLabels.min.js"/></script>
-    <
-    script
+    <script
     type = "text/javascript" >
         $(function () {
             line1 = [<?php echo $itogo_kvt; ?>];
