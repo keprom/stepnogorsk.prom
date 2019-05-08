@@ -66,3 +66,7 @@
 .td-breaked {
     word-break: break-all;
 }
+
+.tr-hover:hover {
+    background-color: #c5cae9 ;
+}

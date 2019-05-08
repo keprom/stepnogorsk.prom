@@ -1331,18 +1331,20 @@ class Billing extends Controller
         $data['use_ture'] = '0';
         $sql = 'select * from industry."7-re" where 
 			period_id=' . $_POST['period_id'];
-        if ($_POST['type'] == 2)
+        if ($_POST['type'] == 2){
             $sql .= " and 
 			coalesce(\"7-re\".debet_value,0) - 
 			coalesce(\"7-re\".kredit_value,0)	+
 			coalesce(\"7-re\".nachisleno,0) -
 			coalesce(\"7-re\".oplata_value,0)>0 ";
-        if ($_POST['type'] == 3)
+        }
+        if ($_POST['type'] == 3) {
             $sql .= " and 
 			coalesce(\"7-re\".debet_value,0) - 
 			coalesce(\"7-re\".kredit_value,0)	+
 			coalesce(\"7-re\".nachisleno,0) -
 			coalesce(\"7-re\".oplata_value,0)<0 ";
+        }
         if ($_POST['ture_id'] != -1) {
             $data['use_ture'] = '1';
             $sql .= " and firm_ture_id= " . $_POST['ture_id'];

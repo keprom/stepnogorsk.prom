@@ -22,7 +22,7 @@ function f_d2($var)
 <head>
     <title>Оборотная ведомость</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-
+    <link rel="stylesheet" href="/css/fullpage.css">
 </head>
 <center>ОБОРОТНАЯ ВЕДОМОСТЬ</center>
 <center><?php echo $org_info->org_name; ?> за <?php echo $period->name . " ";
@@ -33,7 +33,7 @@ $last_group = -1;
 
 ?>
 
-<table width=100% class="striped-table" border=1px cellspacing=0px style="border: black;font-family: Verdana; font-size: xx-small;">
+<table width=100% border=1px cellspacing=0px style="border: black;font-family: Verdana; font-size: xx-small;">
     <tr align=center>
         <td rowspan=2>
             № Дог.
@@ -90,7 +90,7 @@ $last_group = -1;
     <?php foreach ($sql_result->result() as $data): ?>
         <?php if ($last_group != $data->subgroup_id): ?>
             <?php if ($last_group != -1): ?>
-                <tr align=right>
+                <tr class="tr-hover" align=right>
                     <td colspan=2 align=right><b>Итого по группе</b></td>
                     <td><b><?php echo((f_d($sum_debet))); ?></b></td>
                     <td><b><?php echo((f_d($sum_kredit))); ?></b></td>
@@ -118,11 +118,11 @@ $last_group = -1;
                     $sum_itogo_kvt = 0; ?>
                 </tr>
             <?php endif; ?>
-            <tr>
+            <tr class="tr-hover">
                 <td colspan=9><b><?php echo $data->subgroup_name; ?> </b></td>
             </tr>
         <?php endif; ?>
-        <tr>
+        <tr class="tr-hover">
             <td align=center>
                 <?php echo $data->dogovor; ?>
             </td>
@@ -164,7 +164,7 @@ $last_group = -1;
         $sum_itogo_kvt += $data->itogo_kvt;
         ?>
     <?php endforeach; ?>
-    <tr align=right>
+    <tr class="tr-hover" align=right>
         <td colspan=2 align=right><b>Итого по группе</b></td>
         <td><b><?php echo round((f_d3($sum_debet)), 2); ?></b></td>
         <td><b><?php echo round((f_d3($sum_kredit)), 2); ?></b></td>
@@ -186,7 +186,7 @@ $last_group = -1;
     <tr>
         <td colspan=9>&nbsp;</td>
     </tr>
-    <tr>
+    <tr class="tr-hover">
         <td colspan=2 align=right>Итого</td>
         <td><font size=1><?php echo f_d($u_sum_debet); ?></font></td>
         <td><font size=1><?php echo f_d($u_sum_kredit); ?></font></td>
