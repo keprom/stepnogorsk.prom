@@ -33,7 +33,7 @@ $last_group = -1;
 
 ?>
 
-<table width=100% border=1px cellspacing=0px style="border: black;font-family: Verdana; font-size: xx-small;">
+<table width=100% class="striped-table" border=1px cellspacing=0px style="border: black;font-family: Verdana; font-size: xx-small;">
     <tr align=center>
         <td rowspan=2>
             № Дог.
